@@ -1,0 +1,63 @@
+{
+  "name": "@dxkit-org/whatsapp-link",
+  "version": "1.0.0",
+  "description": "TypeScript utility for generating WhatsApp chat/share links with phone number normalization and message support.",
+  "keywords": [
+    "typescript",
+    "whatsapp",
+    "link",
+    "url",
+    "phone",
+    "libphonenumber-js",
+    "messaging",
+    "utility",
+    "wa.me",
+    "api.whatsapp.com",
+    "deep-link",
+    "chat",
+    "share"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxkit-org/whatsapp-link.git"
+  },
+  "homepage": "https://github.com/dxkit-org/whatsapp-link#readme",
+  "bugs": {
+    "url": "https://github.com/dxkit-org/whatsapp-link/issues"
+  },
+  "author": {
+    "name": "Adarsh Hatkar",
+    "url": "https://github.com/AdarshHatkar"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "npx rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "release:patch": "npm version patch",
+    "postversion": "git push && git push --tags && npm publish",
+    "link": "npm run build && npm link"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "libphonenumber-js": "^1.12.14"
+  }
+}
