@@ -19,7 +19,7 @@ Generate WhatsApp chat or share links with proper phone number formatting and op
 ## Installation
 
 ```bash
-npm install @dxkit-org/whatsapp-link libphonenumber-js
+npm install @dxkit-org/whatsapp-link
 ```
 
 ## Usage
